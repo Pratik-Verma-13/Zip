@@ -440,11 +440,11 @@ button:hover{
 }
 #footer{
     width: 100%;
-    height: 200px;
+    height: 250px;
     background-color: black;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 200px;
+    grid-template-rows: 250px;
     color: white;
 }
 .footer-griditems{
@@ -458,26 +458,97 @@ button:hover{
     justify-content: space-around;
     flex-direction: column;
 }
-#about h2{
-    /* background-color: aqua;
-    height: 20%; */
+#about{
+    display: flex;
+    flex-direction: column;
 }
-#about p{
-    /* height: 80%; */
+.about-heading{
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-content{
+    height: 70%;
     width: 80%;
+    /* display: flex; */
     text-align: center;
+    /* margin-top: 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#quicklinks{
+    display: flex;
+    flex-direction: column;
+}
+.quicklinks-heading{
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quicklinks-content{
+    /* margin-top: -10px; */
+}
+.quicklinks-content a{
+    height: 70%;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
 #quicklinks ul{
-    /* background-color: aquamarine; */
+    margin-top: 5px;
     list-style-type: none;
-
 }
 #quicklinks li{
     margin: 5px;
 }
-#contact-us{
-    /* background-color: aliceblue; */
+.contact-us-heading{
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-us-content{
+    height: 70%;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: ;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: repeat(5, 20px);
+    grid-template-areas: 
+    "email-svg      email-id"
+    "phone-svg      phone1"
+    ".              phone2"
+    ".              phone3"
+    "social-icons   social-icons";
+    grid-row-gap: 5px;
+}
+#email-svg{
+    grid-area: email-svg;
+}
+#email-id{
+    grid-area: email-id;
+}
+#phone-svg{
+    grid-area: phone-svg;
+}
+#phone1{
+    grid-area: phone1;
+}
+#phone2{
+    grid-area: phone2;
+}
+#phone3{
+    grid-area: phone3;
+}
+#social-icons{
+    grid-area:social-icons;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+#social-icons img{
+    height: 30px;
+    width: 30px;
 }
